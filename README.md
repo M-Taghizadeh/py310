@@ -3,30 +3,30 @@
 - [PEP8: Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
 - [PEP20: The Zen of Python](https://www.python.org/dev/peps/pep-0020/)
 
-
+![python310](Docs/python310.jpg)
 
 ## Getting Started
 - New syntax features:
-    - [Structural Pattern Matching](##Structural-Pattern-Matching)
-    - [Parenthesized context managers](##Parenthesized-context-managers) 
+    - [Structural Pattern Matching](#Structural-Pattern-Matching)
+    - [Parenthesized context managers](#Parenthesized-context-managers) 
 
 - New features in the standard library:
-    - [Add Optional Length-Checking To zip](##zip)
+    - [Add Optional Length-Checking To zip](#zip)
 
-- [Interpreter improvements error messages](##Better-error-messages)
+- [Interpreter improvements error messages](#Better-error-messages)
     1. SyntaxError
     2. IndentationError
     3. AttributeErrors
 
-- [New typing features](##typing)
+- [New typing features](#typing)
     - Allow writing union types as X | Y
     - Explicit Type Aliases
     - Parameter Specification Variables
 
-- [Improved Modules](##Improved-Modules)
+- [Improved Modules](#Improved-Modules)
 
 
-- [Optimizations](##Optimizations)
+- [Optimizations](#Optimizations)
 
 - Important deprecations, removals or restrictions:
     - Require OpenSSL 1.1.1 or newer
@@ -37,7 +37,7 @@
 
 
 
-## Structural-Pattern-Matching
+# Structural-Pattern-Matching
 ```python
 match subject:
     case <pattern_1>:
@@ -103,7 +103,7 @@ match color:
 
 
 
-## Parenthesized-context-managers
+# Parenthesized-context-managers
 - what is context manager?
 for example : with in open files
 ```python
@@ -155,7 +155,7 @@ with (
 
 
 
-## zip
+# zip
 - what is zip : The zip() function returns a zip object, which is an iterator of tuples where the first item in each passed iterator is paired together, and then the second item in each passed iterator are paired together etc.
 
 - strict in python3.10
@@ -176,9 +176,9 @@ print(list(fullname_tuple))
 
 
 
-## Better-error-messages
+# Better-error-messages
 
-### SyntaxError
+## SyntaxError
 
 ```python
 mydict = {9: 1, 18: 2, 19: 2, 27: 3, 28: 3, 29: 3, 36: 4, 37: 4,
@@ -204,14 +204,14 @@ if name = "mohammad":
     pass    
 ```
 
-### IndentationError
+## IndentationError
 ```python
 def task():
     if True:
     x = 2
 ```
 
-### AttributeErrors : errors suggestions
+## AttributeErrors : errors suggestions
 ```python
 product = "car"
 print(produc) 
@@ -221,7 +221,7 @@ output: NameError: name 'produc' is not defined. Did you mean: 'product'?
 
 
 
-## typing
+# typing
 
 - Union Operator => python3.9 => |, |= 
 
@@ -260,7 +260,8 @@ print(square(2))
 ```
 
 
-## Improved Modules
+
+# Improved Modules
 ```python
 asyncio, argparse
 base64,
@@ -277,7 +278,7 @@ xml
 
 
 
-## Optimizations
+# Optimizations
 - Constructors str(), bytes() and bytearray() are now faster (around 30–40% for small objects).
 
 - The runpy module now imports fewer modules. The python3 -m module-name command startup time is 1.4x faster in average. On Linux, python3 -I -m module-name imports 69 modules on Python 3.9, whereas it only imports 51 modules (-18) on Python 3.10.
